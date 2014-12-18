@@ -254,6 +254,8 @@ int string support_6 0x7f070042
 int string support_alert_title 0x7f07003c
 int string support_back 0x7f070045
 int string support_hint 0x7f070043
+int string support_phone_num 0x7f07008d
+int string support_phone_str 0x7f07008e
 int string support_send 0x7f070044
 int string support_title 0x7f07003b
 int string survey_cancel_msg 0x7f070066

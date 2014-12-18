@@ -63,11 +63,9 @@ public class SupportActivity extends Activity {
 		dateTime = Utilities.sdf.format(Calendar.getInstance().getTime());
 		emailBody = "Technical Support Needed" + "\n"
 				+ "User: " + userID + " running version on " + appVersion + " has reported on problem as follows:" + "\n\n"
-
 				+ "UserID: " + userID + "\n"
 				+ "AppVer: " + appVersion + "\n"
 				+ "DateTime: " + dateTime + "\n";
-
 	}
 
 	private void setListener() {
@@ -101,7 +99,7 @@ public class SupportActivity extends Activity {
 
 				final String problems = rb.getText().toString();
 				final String comments = et.getText().toString();
-				final String title = "No not reply! BodySensorApp Tech Support - ID:" + userID + "@" + appVersion;
+				final String title = "Plz do not reply! BodySensorApp Tech Support - ID:" + userID + "@" + appVersion;
 				final String body = emailBody
 						+ "Category: " + problems + "\n"
 						+ "Comments: " + "\n"
@@ -123,9 +121,7 @@ public class SupportActivity extends Activity {
 						} catch (Exception e) {
 							Log.e("SendMail", e.getMessage(), e);
 						}
-
-						sendSMS("5732288570", "Someone needs tech support, please login public gmail account to see details. @" + dateTime);
-
+						sendSMS(getApplicationContext().getString(R.string.support_phone_num), getApplicationContext().getString(R.string.support_phone_str) + dateTime);
 					}
 				}).start();
 

@@ -520,6 +520,10 @@ containing a value of this type.
         public static final int support_alert_title=0x7f07003c;
         public static final int support_back=0x7f070045;
         public static final int support_hint=0x7f070043;
+        /**  support 
+         */
+        public static final int support_phone_num=0x7f07008d;
+        public static final int support_phone_str=0x7f07008e;
         public static final int support_send=0x7f070044;
         /**  Support 
          */
