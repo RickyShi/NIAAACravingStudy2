@@ -97,7 +97,7 @@ public class Utilities {
 	public final static int MAX_TRIGGER_MORNING = 1;//1
 	public final static int MAX_TRIGGER_RANDOM = 6;//6
 	public final static int MAX_TRIGGER_FOLLOWUP = 3;//3
-	public final static int VOLUME = 8;//10
+	public final static int VOLUME = 15;// 10
 	public final static String PHONE_BASE_PATH = "sdcard/TestResult_craving/";
 	public final static int CODE_NAME_MORNING = 1;
 	public final static int CODE_NAME_DRINKING = 2;
