@@ -181,6 +181,11 @@ containing a value of this type.
     }
     public static final class dimen {
         /** 
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
@@ -189,6 +194,7 @@ containing a value of this type.
         /**  Default screen margins, per the Android Design guidelines. 
          */
         public static final int activity_top_margin=0x7f090000;
+        public static final int activity_vertical_margin=0x7f090002;
     }
     public static final class drawable {
         public static final int common_signin_btn_icon_dark=0x7f020000;
@@ -223,82 +229,87 @@ containing a value of this type.
         public static final int icon2=0x7f02001d;
     }
     public static final class id {
-        public static final int Disable=0x7f060035;
-        public static final int Enable=0x7f060034;
-        public static final int about=0x7f060037;
+        public static final int Disable=0x7f060037;
+        public static final int Enable=0x7f060036;
+        public static final int about=0x7f060039;
+        public static final int action_settings=0x7f060035;
         public static final int assigned_ID=0x7f060007;
-        public static final int btnBluetooth=0x7f060022;
-        public static final int btnReturn=0x7f06001f;
-        public static final int btnSchedule=0x7f06001e;
-        public static final int btnSensorConnect=0x7f060021;
-        public static final int btnSensorReset=0x7f060023;
-        public static final int btnSuspension=0x7f060030;
+        public static final int btnBluetooth=0x7f060023;
+        public static final int btnReturn=0x7f060020;
+        public static final int btnSchedule=0x7f06001f;
+        public static final int btnSensorConnect=0x7f060022;
+        public static final int btnSensorReset=0x7f060024;
+        public static final int btnSuspension=0x7f060031;
         public static final int btn_assign=0x7f060008;
         public static final int btn_remove=0x7f06000c;
-        public static final int button_scan=0x7f060011;
+        public static final int button_scan=0x7f060012;
+        public static final int container=0x7f06000d;
         public static final int deassigned_ID=0x7f06000b;
         public static final int hybrid=0x7f060004;
-        public static final int manage=0x7f060036;
-        public static final int morning_box=0x7f06001d;
-        public static final int morning_picker=0x7f06001c;
-        public static final int morning_text=0x7f06001b;
-        public static final int new_devices=0x7f060010;
+        public static final int manage=0x7f060038;
+        public static final int morning_box=0x7f06001e;
+        public static final int morning_picker=0x7f06001d;
+        public static final int morning_text=0x7f06001c;
+        public static final int new_devices=0x7f060011;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int paired_devices=0x7f06000e;
-        public static final int pin_edit=0x7f060032;
-        public static final int pin_text=0x7f060031;
-        public static final int rm_local=0x7f060033;
+        public static final int paired_devices=0x7f06000f;
+        public static final int pin_edit=0x7f060033;
+        public static final int pin_text=0x7f060032;
+        public static final int rm_local=0x7f060034;
         public static final int satellite=0x7f060002;
-        public static final int section_label1=0x7f060012;
-        public static final int section_label2=0x7f060013;
-        public static final int section_label3=0x7f060014;
-        public static final int section_label4=0x7f060015;
-        public static final int section_label5=0x7f060016;
-        public static final int section_label6=0x7f060017;
-        public static final int section_label7=0x7f060018;
-        public static final int section_label8=0x7f060019;
-        public static final int section_label9=0x7f06001a;
-        public static final int sensor_status_text=0x7f060020;
-        public static final int support_btn_back=0x7f06002e;
-        public static final int support_btn_send=0x7f06002d;
-        public static final int support_edit=0x7f06002c;
-        public static final int support_r_1=0x7f060026;
-        public static final int support_r_2=0x7f060027;
-        public static final int support_r_3=0x7f060028;
-        public static final int support_r_4=0x7f060029;
-        public static final int support_r_5=0x7f06002a;
-        public static final int support_r_6=0x7f06002b;
-        public static final int support_set=0x7f060025;
-        public static final int support_text=0x7f060024;
-        public static final int suspension_picker=0x7f06002f;
+        public static final int section_label1=0x7f060013;
+        public static final int section_label2=0x7f060014;
+        public static final int section_label3=0x7f060015;
+        public static final int section_label4=0x7f060016;
+        public static final int section_label5=0x7f060017;
+        public static final int section_label6=0x7f060018;
+        public static final int section_label7=0x7f060019;
+        public static final int section_label8=0x7f06001a;
+        public static final int section_label9=0x7f06001b;
+        public static final int sensor_status_text=0x7f060021;
+        public static final int support_btn_back=0x7f06002f;
+        public static final int support_btn_send=0x7f06002e;
+        public static final int support_edit=0x7f06002d;
+        public static final int support_r_1=0x7f060027;
+        public static final int support_r_2=0x7f060028;
+        public static final int support_r_3=0x7f060029;
+        public static final int support_r_4=0x7f06002a;
+        public static final int support_r_5=0x7f06002b;
+        public static final int support_r_6=0x7f06002c;
+        public static final int support_set=0x7f060026;
+        public static final int support_text=0x7f060025;
+        public static final int suspension_picker=0x7f060030;
         public static final int tab_assign=0x7f060005;
         public static final int tab_demo_tv1=0x7f060006;
         public static final int tab_demo_tv2=0x7f06000a;
         public static final int tab_logoff=0x7f060009;
         public static final int terrain=0x7f060003;
-        public static final int title_new_devices=0x7f06000f;
-        public static final int title_paired_devices=0x7f06000d;
+        public static final int title_new_devices=0x7f060010;
+        public static final int title_paired_devices=0x7f06000e;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_admin_manage=0x7f030000;
-        public static final int activity_device_list=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_morning_scheduler=0x7f030003;
-        public static final int activity_sensor_connect=0x7f030004;
-        public static final int activity_support=0x7f030005;
-        public static final int activity_suspension_picker=0x7f030006;
-        public static final int device_name=0x7f030007;
-        public static final int pin_input=0x7f030008;
-        public static final int remove_id=0x7f030009;
-        public static final int survey_layout=0x7f03000a;
-        public static final int test=0x7f03000b;
+        public static final int activity_charge_reminder=0x7f030001;
+        public static final int activity_device_list=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_morning_scheduler=0x7f030004;
+        public static final int activity_sensor_connect=0x7f030005;
+        public static final int activity_support=0x7f030006;
+        public static final int activity_suspension_picker=0x7f030007;
+        public static final int device_name=0x7f030008;
+        public static final int fragment_charge_reminder=0x7f030009;
+        public static final int pin_input=0x7f03000a;
+        public static final int remove_id=0x7f03000b;
+        public static final int survey_layout=0x7f03000c;
+        public static final int test=0x7f03000d;
     }
     public static final class menu {
-        public static final int main=0x7f0b0000;
+        public static final int charge_reminder=0x7f0b0000;
+        public static final int main=0x7f0b0001;
     }
     public static final class raw {
         public static final int alarm_sound=0x7f040000;
@@ -306,8 +317,9 @@ containing a value of this type.
         public static final int voice_sound=0x7f040002;
     }
     public static final class string {
+        public static final int action_settings=0x7f070091;
         public static final int admin_set_msg=0x7f070047;
-        /**  Admin  
+        /**  Admin 
          */
         public static final int admin_set_title=0x7f070046;
         public static final int app_name=0x7f07001b;
@@ -354,7 +366,7 @@ containing a value of this type.
          */
         public static final int bedtime_title=0x7f07002d;
         public static final int bluetooth_disabled=0x7f07007d;
-        /**  Bluetooth  
+        /**  Bluetooth 
          */
         public static final int bluetooth_enabled=0x7f07007c;
         public static final int bluetooth_loop=0x7f07007f;
@@ -366,6 +378,11 @@ containing a value of this type.
         /**  Surveys 
          */
         public static final int btn_submit=0x7f07005e;
+        public static final int charge_reminder_alert_button=0x7f070094;
+        public static final int charge_reminder_alert_message=0x7f070093;
+        /**  9pm dialog 
+         */
+        public static final int charge_reminder_alert_title=0x7f070092;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -442,6 +459,7 @@ containing a value of this type.
         public static final int device_select=0x7f070083;
         public static final int first_drink_msg=0x7f070077;
         public static final int first_drink_title=0x7f070076;
+        public static final int hello_world=0x7f070090;
         /**  Initial Drinking 
          */
         public static final int initial_drink_name=0x7f070075;
@@ -481,7 +499,7 @@ containing a value of this type.
         public static final int pin_message_wrong=0x7f070058;
         public static final int pin_title=0x7f070055;
         public static final int pin_title_wrong=0x7f070057;
-        /**  Warning  
+        /**  Warning 
          */
         public static final int public_key_lost=0x7f070086;
         public static final int remove_btn=0x7f07004d;
@@ -500,10 +518,10 @@ containing a value of this type.
         public static final int section_6=0x7f07002a;
         public static final int section_62=0x7f07002b;
         public static final int section_7=0x7f07002c;
-        /**  Sensor  
+        /**  Sensor 
          */
         public static final int sensor_connect=0x7f070085;
-        /**  Service  
+        /**  Service 
          */
         public static final int service_start=0x7f070078;
         public static final int service_stop=0x7f070079;
@@ -544,6 +562,7 @@ containing a value of this type.
          */
         public static final int suspension_title=0x7f070033;
         public static final int suspension_under=0x7f07003a;
+        public static final int title_activity_charge_reminder=0x7f07008f;
         public static final int user_setpwd_msg=0x7f070049;
         public static final int user_setpwd_title=0x7f070048;
         public static final int yes=0x7f07001c;
