@@ -128,7 +128,7 @@ public class Utilities {
 
 	public final static int REMINDER_IN_SECONDS = 5*60;
 	public final static int COMPLETE_SURVEY_IN_SECONDS = 7*60;
-	public final static int FOLLOWUP_IN_SECONDS = 30*60;
+	public final static int FOLLOWUP_IN_SECONDS = 30 * 60;
 	public final static int SUSPENSION_INTERVAL_IN_SECOND = 15*60;
 	public final static String TIME_NONE = "none";
 	public final static int defHour = 12;

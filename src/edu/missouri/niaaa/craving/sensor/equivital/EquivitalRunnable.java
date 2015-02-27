@@ -1,5 +1,6 @@
 package edu.missouri.niaaa.craving.sensor.equivital;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -80,6 +81,7 @@ public class EquivitalRunnable implements Runnable, ISemDeviceSummaryEvents, ISe
 	public static EquivitalRunnable getInstance(String address, String name,
 			String ID) {
 		if (_instanceEQ == null) {
+			Log.d(TAG, "EquivitalRunnable is null");
 			_instanceEQ = new EquivitalRunnable(address, name, ID);
 		} else {
 			Log.d(TAG, "EquivitalRunnable is not null");
@@ -125,7 +127,6 @@ public class EquivitalRunnable implements Runnable, ISemDeviceSummaryEvents, ISe
 		//Here to registered the Accelerometer Listener
 		device.addAccelerometerEventListener(this);
 		ISemConnection connection = SemBluetoothConnection.createConnection(address);
-
 		int loopint = 5;
 		while (!device.isConnected() && loopint > 0) {
 			loopint--;
@@ -155,7 +156,8 @@ public class EquivitalRunnable implements Runnable, ISemDeviceSummaryEvents, ISe
 				arg1.getSummary().getQualityConfidence().getECGQuality(),
 				arg1.getSummary().getQualityConfidence().getImpedanceQuality(),
 				arg1.getSummary().getQualityConfidence().getHeartRateConfidence(),
-				arg1.getSummary().getQualityConfidence().getBreathingRateConfidence());
+				arg1.getSummary().getQualityConfidence().getBreathingRateConfidence(),
+				arg1.getSummary().getTemperature().getSkinTemperature());
 		//Log.d("Chest Acc Info","chest data recorded:");
 	}
 
@@ -163,30 +165,16 @@ public class EquivitalRunnable implements Runnable, ISemDeviceSummaryEvents, ISe
 			double beltSensorRate, double ecgDerivedRate,double impedanceRate,
 			double ecgRate, double beltQuality, double ecgQuality,
 			double impedanceQuality, double heartRateConfidence,
-			double breathingRateConfidence) {
-		// TODO Auto-generated method stub
-		/*
-		 * 1/22 Ricky Reduce ecgDerivedRate,impedanceRate,impedanceQuality
-		 */
-		/*
-		 * String
-		 * dataFromChestSensor=motion+","+bodyPosition+","+String.valueOf(
-		 * beltSensorRate)+","+String.valueOf(ecgDerivedRate)+","+
-		 * String.valueOf
-		 * (impedanceRate)+","+String.valueOf(ecgRate)+","+String.valueOf
-		 * (beltQuality)+","+String.valueOf(ecgQuality)+","+
-		 * String.valueOf(impedanceQuality
-		 * )+","+String.valueOf(heartRateConfidence
-		 * )+","+String.valueOf(breathingRateConfidence
-		 * )+","+String.valueOf(GSR);
-		 */
+			double breathingRateConfidence, double skinTemprature) {
+		DecimalFormat df = new DecimalFormat("0.00");
 		String dataFromChestSensor=motion+","+bodyPosition+","
 				+String.valueOf(beltSensorRate)+","
 				+String.valueOf(ecgRate)+","
 				+String.valueOf(beltQuality)+","
 				+String.valueOf(ecgQuality)+","
 				+String.valueOf(heartRateConfidence)+","
-				+String.valueOf(breathingRateConfidence);
+				+ String.valueOf(breathingRateConfidence) + ","
+				+ String.valueOf(df.format(skinTemprature));
 		 Message msgData=new Message();
 		 msgData.what = CHEST_SENSOR_DATA;
 		 Bundle dataBundle = new Bundle();
